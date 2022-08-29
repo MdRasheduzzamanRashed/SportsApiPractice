@@ -13,10 +13,16 @@ const topGameDisplay = (data) => {
     gameDiv.classList.add("border-2");
     gameDiv.innerHTML = `
         <img class="w-full" src="${sport.strSportThumb}" alt="Image Unavilable">
-        <h3 class="text-center text-3xl py-2">${sport.strSport}</h3> 
+        <div class="text-center mt-2 font-bold">
+        <h3 class=" text-3xl pb-3">${sport.strSport}</h3>
+        <button onClick="gameDetail('${sport.strSportDescription}')" class="block w-full py-2 text-white bg-blue-700" >More Detail</button>
+        </div> 
     `;
     gameField.appendChild(gameDiv);
   });
+};
+const gameDetail = (gameData) => {
+    console.log(gameData);
 };
 
 topNews();
