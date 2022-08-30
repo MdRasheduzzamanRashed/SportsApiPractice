@@ -14,7 +14,7 @@ const topGameDisplay = (data) => {
 
     const gameImg = document.createElement("img");
     gameImg.onerror = function () {
-      this.src = "../img/sports.jpg";
+      this.src = "./src/img/sports.jpg";
     };
     gameImg.src = sport.strSportThumb;
     gameImg.classList.add("w-full");
